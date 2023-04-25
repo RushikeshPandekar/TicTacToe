@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TicTacToe</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li style="font-size: 25px;">Tic-Tac-Toe</li>
+        </ul>
+        <ul class="choices">
+            <li ><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#help">Help ?</a></li>
+        </ul>
+        <a href="#" class="icon" onclick=myFunction()><i class="fa fa-bars"></i></a>
+    </nav>
+    <div class="getinfo" id="getinfo">
+        <label>Enter Player-1 Name</label>
+        <input type="text" name="player1" id="player1" placeholder="Player-1">
+        <label>Enter Player-2 Name</label>
+        <input type="text" name="player2" id="player2" placeholder="Player-2">
+        <button class="btn" id="btn-2" onclick="submitinfo()">Start</button>
+        <span id='msg'>Please Enter Both player Names</span>
+    </div>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#help">Help ?</a></li>
+        </ul>
+    </div>
+    <div class="playerTurn" id="playerTurn">
+        
+    </div>
+    <div class="container" id="container">
+        <div class="game-info">
+            <span>Welcome To Tic-Tac-Toe</span>
+            <span id="turnid">Turn of X</span>
+            <button class="btn" id="btn-1" onclick="Reset()">Reset</button>
+        </div>
+        <div class="game" id="game">
+            <div class="boxes bl bt"><span class="box-text" id="box-1"></span></div>
+            <div class="boxes bt"><span class="box-text" id="box-2"></span></div>
+            <div class="boxes br bt"><span class="box-text" id="box-3"></span></div>
+            <div class="boxes bl"><span class="box-text" id="box-4"></span></div>
+            <div class="boxes"><span class="box-text" id="box-5"></span></div>
+            <div class="boxes br"><span class="box-text" id="box-6"></span></div>
+            <div class="boxes bl bb"><span class="box-text" id="box-7"></span></div>
+            <div class="boxes bb"><span class="box-text" id="box-8"></span></div>
+            <div class="boxes br bb"><span class="box-text" id="box-9"></span></div>
+        </div>
+        <div class="winning" id="winning">
+            <span class="winningStatus" id="winningStatus"></span>
+            <img src="https://thumbs.dreamstime.com/b/winner-star-image-hi-res-rendered-artwork-could-be-used-any-graphic-design-46858837.jpg"
+                alt="Winner">
+        </div>
+    </div>
+    <div class="about" id="about">
+        <h1>About</h1>
+        <div>
+            Tic-tac-toe is played on a three-by-three grid by two players, who alternately place the marks X and O in
+            one of the nine spaces in the grid.Players soon discover that the best play from both parties leads to a
+            draw. Hence, tic-tac-toe is often played by young children who may not have discovered the optimal strategy.
+            Because of the simplicity of tic-tac-toe, it is often used as a pedagogical tool for teaching the concepts
+            of good sportsmanship and the branch of artificial intelligence that deals with the searching of game trees.
+            It is straightforward to write a computer program to play tic-tac-toe perfectly or to enumerate the 765
+            essentially different positions (the state space complexity) or the 26,830 possible games up to rotations
+            and reflections (the game tree complexity) on this space.[1] If played optimally by both players, the game
+            always ends in a draw, making tic-tac-toe a futile game
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Tic-tac-toe#Gameplay">Learn more</a>
+    </div>
+    <br>
+    <div class="help" id="help">
+        <h1>Help?</h1>
+        <div>
+            <ul>
+                <li>Win: If the player has two in a row, they can place a third to get three in a row.</li>
+                <li>Block: If the opponent has two in a row, the player must play the third themselves to block the
+                    opponent.</li>
+                <li>Fork: Cause a scenario where the player has two ways to win (two non-blocked lines of 2).</li>
+                <li>Blocking an opponent's fork: If there is only one possible fork for the opponent, the player should
+                    block it. Otherwise, the player should block all forks in any way that simultaneously allows them to
+                    make two in a row. Otherwise, the player should make a two in a row to force the opponent into
+                    defending, as long as it does not result in them producing a fork. For example, if "X" has two
+                    opposite corners and "O" has the center, "O" must not play a corner move to win. (Playing a corner
+                    move in this scenario produces a fork for "X" to win.)</li>
+                <li>Center: A player marks the center. (If it is the first move of the game, playing a corner move gives
+                    the second player more opportunities to make a mistake and may therefore be the better choice;
+                    however, it makes no difference between perfect players.)</li>
+                <li>Opposite corner: If the opponent is in the corner, the player plays the opposite corner.</li>
+                <li>Empty corner: The player plays in a corner square.</li>
+                <li>Empty side: The player plays in a middle square on any of the four sides.</li>
+            </ul>
+        </div>
+        <a href="https://en.wikipedia.org/wiki/Tic-tac-toe#Strategy">Learn more</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

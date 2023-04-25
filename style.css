@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Antique&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+     font-family: 'Zen Antique', serif;
+}
+.container{
+    display:none;
+}
+.game{
+   display:block;
+}
+.container > div{
+    padding-top: 5vw;
+}
+nav{
+    background-color: rgb(61, 55, 55);
+    color: white;
+    padding: 13px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+#turnid{
+    color:red;
+}
+.menu{
+    background-color: rgb(46, 43, 43);
+    width:100%;
+    padding:10px;
+    display:none;
+    position: absolute;
+}
+.menu ul li{
+   margin:15px;
+   list-style: none;
+}
+.menu ul li a{
+    color:white;
+    font-size:14px;
+    text-decoration: none;
+}
+.icon{
+    display:none;
+    width:10px;
+    height:10px;
+    color: white;
+}
+.choices{
+    display: flex;
+}
+.choices li{
+    margin: 15px;
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid black;
+}
+.boxes:hover{
+    background-color: bisque;
+}
+.bl{
+    border-left: none;
+}
+.br{
+    border-right: none;
+}
+.bb{
+    border-bottom: none;
+}
+.bt{
+    border-top: none;
+}
+.box-text{
+    font-size: 5vw;
+    font-weight: 500;
+}
+.game{
+    padding: 6px;
+    display: grid;
+    grid-template-rows: repeat(3,12vw);
+    grid-template-columns: repeat(3,12vw);
+    justify-content: center;
+}
+#msg{
+    display: none;
+}
+.game-info{
+    display: flex;
+    font-size: 45px;
+    font-weight: 600;
+    padding: 5vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.getinfo{
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-image: url('https://wallpapercave.com/wp/wp8984749.jpg');
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+}
+#btn-2{
+    background-color: rgb(47, 184, 143);
+}
+.getinfo label,.getinfo input{
+    margin: 7px;
+    padding: 5px;
+}
+
+.winning{
+    display: none;
+}
+span,.btn{
+    margin:10px;
+}
+#about{
+    display: none;
+}
+#help{
+    display: none;
+}
+.about,.help{
+    
+    font-size: 25px;
+    padding: 4vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(71, 70, 70);
+    color: rgb(197, 197, 230);
+}
+.about a,.help a {
+    text-decoration:none;
+    color: beige;
+}
+.help li{
+    list-style-type: none;
+}
+
+.btn{
+    width: 150px;
+    height: 36px;
+    font-size:22px;
+    border-radius: 5px;
+    font-weight: 400;
+    padding:5px;
+    background-color: coral;
+    border: none;
+}
+.winningStatus{
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 900;
+    color:rgb(70, 198, 209);
+}
+.playerTurn{
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 4vw;
+    font-weight: 600;
+}
+img{
+    width:45vw;
+    height: 35vw;
+}
+@media (max-width:1000px){
+    .container{
+        flex-direction: column;
+    }
+    .game{
+        grid-template-rows: repeat(3,150px);
+        grid-template-columns: repeat(3,150px);
+    }
+}
+@media (max-width:825px){
+     img{
+        width:550px;
+        height: 500px;
+     }
+}
+@media (max-width:550px){
+    .game{
+        grid-template-rows: repeat(3,120px);
+        grid-template-columns: repeat(3,120px);
+    }
+    img{
+        width:280px;
+        height: 260px;
+     }
+    .about,.help{
+        font-size: 17px;
+    }
+    .game-info{
+        font-size: 30px;
+    }
+    
+}
+@media (max-width:400px){
+   .icon{
+       display: inline-block;
+   }
+   .choices{
+    display: none;
+   }
+   .game{
+    grid-template-rows: repeat(3,90px);
+    grid-template-columns: repeat(3,90px);
+   }
+   .game-info{
+    font-size: 20px;
+    }
+}
